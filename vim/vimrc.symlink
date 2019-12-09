@@ -17,3 +17,6 @@ Plugin 'fatih/vim-go'
 call vundle#end()            " required
 
 filetype indent plugin on
+
+" Make Ctrl + C toggle the go coverage display
+map <C-C> :GoCoverageToggle<CR>

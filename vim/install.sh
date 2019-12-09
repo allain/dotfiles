@@ -6,5 +6,5 @@ else
 	echo vim/vundle already installed
 fi
 
-vim +PluginInstall +qall
+vim +PluginInstall +GoInstallBinaries +qall
 reset # seems vim install line above makes the shell all nuts
