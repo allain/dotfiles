@@ -13,7 +13,6 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'fatih/vim-go'
 
-
 call vundle#end()            " required
 
 filetype indent plugin on

@@ -6,7 +6,9 @@ else
 	echo installing fish
 	sudo apt-get install fish
 	mkdir -p ~/.config/fish
+
 fi
 
+	ln -s ~/.dotfiles/fish/config.fish ~/.config/fish/config.fish
 
 
