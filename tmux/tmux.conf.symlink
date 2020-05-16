@@ -1,0 +1,38 @@
+# Make working the modes more like vim
+setw -g mode-keys vi
+
+# Improve colors
+set -g default-terminal 'screen-256color'
+
+# Set scrollback buffer to 10000
+set -g history-limit 10000
+
+# Customize the status line
+set -g status-fg  green
+set -g status-bg  black
+
+#Make Easier cycling through layouts
+bind -n C-S-Space next-layout
+# and again with just space, since there is no uppercase space
+bind -n C-Space next-layout
+
+# Make CTRL+SHIFT + direction open new pane
+bind -n C-S-Left  split-window -bh
+bind -n C-S-Right split-window -h
+bind -n C-S-Up    split-window -bv
+bind -n C-S-Down  split-window -v
+bind -n C-S-h     split-window -bh
+bind -n C-S-l     split-window -h
+bind -n C-S-k     split-window -bv
+bind -n C-S-h     split-window -v
+
+# List of plugins
+set -g @plugin 'tmux-plugins/tpm'
+set -g @plugin 'tmux-plugins/tmux-sensible'
+set -g @plugin 'tmux-plugins/tmux-resurrect'
+set -g @plugin 'christoomey/vim-tmux-navigator'
+
+# Initialize TMUX plugin manager (keep this line at the very bottom of tmux.conf)
+run '~/.tmux/plugins/tpm/tpm'
+
+

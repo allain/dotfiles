@@ -1,7 +1,8 @@
 syntax on
 
 set shell=/bin/bash
-
+set mouse=a
+set hls is
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
@@ -12,10 +13,21 @@ call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'fatih/vim-go'
-
+Plugin 'ternjs/tern_for_vim'
+Plugin 'christoomey/vim-tmux-navigator'
 call vundle#end()            " required
 
 filetype indent plugin on
 
 " Make Ctrl + C toggle the go coverage display
 map <C-C> :GoCoverageToggle<CR>
+
+" Easier split movement
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
+
+" Default Split Opening Positions
+set splitbelow
+set splitright
