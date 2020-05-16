@@ -22,6 +22,6 @@ else
 	echo go/gocyclo already installed
 fi
 
-echo 'export PATH="$PATH:$HOME/go/bin"' >> ~/.bashrc
+grep -qxF 'export PATH="$PATH:$HOME/go/bin"' ~/.bashrc || echo 'export PATH="$PATH:$HOME/go/bin"' >> ~/.bashrc
 
 
