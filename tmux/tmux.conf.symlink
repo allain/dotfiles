@@ -26,6 +26,15 @@ bind -n C-S-l     split-window -h
 bind -n C-S-k     split-window -bv
 bind -n C-S-h     split-window -v
 
+bind -c C-h	  select-pane -L
+bind -c C-l	  select-pane -R
+bind -c C-j	  select-pane -D
+bind -c C-k	  select-pane -U
+bind -c C-Left	  select-pane -L
+bind -c C-Right	  select-pane -R
+bind -c C-Down	  select-pane -D
+bind -c C-Up	  select-pane -U
+
 # List of plugins
 set -g @plugin 'tmux-plugins/tpm'
 set -g @plugin 'tmux-plugins/tmux-sensible'
